@@ -1,0 +1,6 @@
+.fl_right ul li a{
+    font-size: 14px;
+    text-decoration: none;
+    list-style:none;
+    border: solid green 2px;
+}
