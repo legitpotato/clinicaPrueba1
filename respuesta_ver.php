@@ -26,7 +26,7 @@
 
 if (isset($_GET['ver'])) {
     
-    $mysqli = new mysqli('localhost', 'root', '', 'clinica') or die(mysqli_error($mysqli));
+    $mysqli = new mysqli('bft4tkk8rm2x28aipdxo-mysql.services.clever-cloud.com', 'uk6jrnxz2lrw4i6m', '6WsyDL5ctp48vTUH6up9', 'bft4tkk8rm2x28aipdxo') or die(mysqli_error($mysqli));
     $update = false;
     $codig = $_GET['ver'];
     $result = $mysqli->query("SELECT * FROM respuestas WHERE ID='$codig;'");

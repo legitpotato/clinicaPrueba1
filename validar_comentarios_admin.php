@@ -4,7 +4,7 @@ if(!isset($_SESSION)) {
     session_start(); 
 }
 
-$mysqli = new mysqli('localhost', 'root', '', 'clinica') or die(mysqli_error($mysqli));
+$mysqli = new mysqli('bft4tkk8rm2x28aipdxo-mysql.services.clever-cloud.com', 'uk6jrnxz2lrw4i6m', '6WsyDL5ctp48vTUH6up9', 'bft4tkk8rm2x28aipdxo') or die(mysqli_error($mysqli));
 
 $codigo = 0;
 $update = false;

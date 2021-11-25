@@ -42,7 +42,7 @@
 			</thead>
 			<tbody>
 			<?php
-				$conn = mysqli_connect("localhost", "root", "", "clinica");
+				$conn = mysqli_connect("bft4tkk8rm2x28aipdxo-mysql.services.clever-cloud.com", "uk6jrnxz2lrw4i6m", "6WsyDL5ctp48vTUH6up9", "bft4tkk8rm2x28aipdxo");
 				if ($conn-> connect_error) {
 					die("Conexión fallida:". $conn-> connect_error);
 				}
