@@ -60,7 +60,7 @@ $_SESSION["Edad"] = $user5;
 $_SESSION["Genero"] = $user7;
 $_SESSION["Contraseña"] = $user8;
 
-if($fila){
+if($filas){
     $_SESSION["Rut"] = $rut;
     header("location: index.php");
 
