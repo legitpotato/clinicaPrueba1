@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'proyectobancodesangre'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BFE0CBEFFC0E4A1FB031A27207B48F42 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8983184FEE504ECCA5ABB06A6353D0BD }}
           package: .
