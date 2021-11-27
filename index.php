@@ -226,7 +226,7 @@
 
     <ul class="nospace clear">
       <li class="one_quarter first">
-        <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Llamanos</strong> +56 2  2913 0000</span></div>
+        <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Llamanos al </strong>+56 2 2913 2261<strong> o también al </strong>+56 2 2913 2265</span></div>
       </li>
       <!--
       <li class="one_quarter">
