@@ -1,9 +1,9 @@
 <?php
 
-    $server = "bft4tkk8rm2x28aipdxo-mysql.services.clever-cloud.com";
-    $user = "uk6jrnxz2lrw4i6m";
-    $pass = "6WsyDL5ctp48vTUH6up9";
-    $db = "bft4tkk8rm2x28aipdxo";
+    $server = "bxrwf479ihzzkowvfops-mysql.services.clever-cloud.com";
+    $user = "uasbvg6wuo7zeqf0";
+    $pass = "vM925AkxLdktJmeyNbSa";
+    $db = "bxrwf479ihzzkowvfops";
     $conexion = mysqli_connect($server,$user,$pass,$db);
     
     if($conexion){
