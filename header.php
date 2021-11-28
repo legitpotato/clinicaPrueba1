@@ -53,9 +53,20 @@ if (isset($_SESSION['Nombres'])) {
         <li class="active"><a href="index.php" class="header-link">Inicio</a></li>
         <li><a class="drop" href="#" class="header-link">Páginas</a>
           <ul>
+              <?php
+                if(isset($_SESSION["Nombres"])){
+                  if($_SESSION["Nombres"] == "Admin"){ ?>
+                    <li><a href="cruce.php" class="header-link">Cruce de Genotipos</a></li>
+
+                  <?php }
+                }?>
+
+
             <?php if (isset($_SESSION['Nombres'])) { ?>
-            <li><a href="respuestas.php" class="header-link">Mis respuestas</a></li>
+              <li><a href="respuestas.php" class="header-link">Mis respuestas</a></li>
             <?php } ?>
+
+
             <?php if (isset($_SESSION['Nombres'])) {
                 if ($_SESSION['Nombres'] == 'Admin') { ?>
               <li><a href="comentarios_admin.php" class="header-link">[A]Comentarios</a></li>
