@@ -1,0 +1,25 @@
+* {
+	font-family: sans-serif;
+	margin:0;
+	border:0;
+	padding:0;
+}
+
+h1{
+	font-family: sans-serif;
+	text-transform: none;
+}
+
+h2{
+    font-family: sans-serif;
+    text-transform: none;
+}
+
+h3{
+	font-family: sans-serif;
+	text-transform: none;
+}
+
+.row1{color:#3d7cda; background-color:#e3e3e3; border-color:#ffffff;}
+
+.coloured {color: #3d7cda; background-color: #e3e3e3;}
