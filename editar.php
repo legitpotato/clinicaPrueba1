@@ -1,6 +1,5 @@
 <?php
 include_once("base/conexion.php");
-include_once("header.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +12,7 @@ include_once("header.php");
     
     <title>Actualizar</title>
 </head>
+<?php include("header.php");?>
 <body>
     
 <div class="wrapper bgded overlay gradient" style="background-image:url('images/demo/backgrounds/doc.jpg');">

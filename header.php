@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Banco de Sangre</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
+</head>
 <?php
 
 include 'base/conexion.php';
@@ -14,8 +22,6 @@ if (isset($_SESSION['Nombres'])) {
     <div class="fl_left"> 
       <!-- ################################################################################################ -->
       <ul class="nospace">
-        <li><i class="fas fa-phone rgtspace-5"></i> +56 2  2913 0000</li>
-
         <?php if (isset($_SESSION['Nombres'])) { ?>
 
               <li><p>Bienvendio <?php echo $user; ?></p></li>
@@ -50,12 +56,36 @@ if (isset($_SESSION['Nombres'])) {
     <nav id="mainav" class="fl_right"> 
       <!-- ################################################################################################ -->
       <ul class="clear">
-        <li class="active"><a href="index.php" class="header-link">Inicio</a></li>
-        <li><a class="drop" href="#" class="header-link">Páginas</a>
+        <li><a href="index.php" class="header-link">Inicio</a></li>
+        <li><a class="drop" class="header-link">Páginas</a>
           <ul>
-            <?php if (isset($_SESSION['Nombres'])) { ?>
-            <li><a href="respuestas.php" class="header-link">Mis respuestas</a></li>
-            <?php } ?>
+              <li><a href="pasos.php">Proceso de donacion</a></li>
+              <?php
+                if(isset($_SESSION["Nombres"])){
+                  if($_SESSION["Nombres"] == "Admin" || $_SESSION["Nombres"] == "Consultor"){ ?>
+                    <li><a href="cruce.php" class="header-link">Cruce de Genotipos</a></li>
+                    <li><a href="informes.php" class="header-link">Informes de Genotipificacion</a></li>
+                  <?php }
+                }?>
+
+              <?php
+                if(isset($_SESSION["Nombres"])){
+                  if($_SESSION["Nombres"] == "Consultor"){ ?>
+                    <li><a href="donantes.php" class="header-link">Lista de donantes</a></li>
+                  <?php }
+                }?>
+
+            <?php if (isset($_SESSION['Nombres'])) { 
+                    if($_SESSION["Nombres"] == "Admin" || $_SESSION["Nombres"] == "Consultor"){
+                    } 
+                    else{ ?>
+              <li><a href="respuestas.php" class="header-link">Mis respuestas</a></li>
+            <?php
+              } 
+             }
+             ?>
+
+
             <?php if (isset($_SESSION['Nombres'])) {
                 if ($_SESSION['Nombres'] == 'Admin') { ?>
               <li><a href="comentarios_admin.php" class="header-link">[A]Comentarios</a></li>
@@ -69,11 +99,18 @@ if (isset($_SESSION['Nombres'])) {
         
         
 
-            <?php if (isset($_SESSION['Nombres'])) { ?>
+            <?php if (isset($_SESSION['Nombres'])) { 
+              if($_SESSION["Nombres"] == "Admin" || $_SESSION["Nombres"] == "Consultor"){
+              ?>
+                  <li><a href="salir.php">Salir</a></li>
+              <?php } 
+              else{
+                ?>
                   <li><a href="formulario.php">Formulario</a></li>
                   <li><a href="editar.php">Editar</a></li>
                   <li><a href="salir.php">Salir</a></li>
-                <?php } else { ?>
+                
+                <?php } } else { ?>
                   <li><a href="ingresar.php">Ingresar</a></li>
                   <li><a href="registro.php">Registrarse</a></li>
                 <?php } ?>

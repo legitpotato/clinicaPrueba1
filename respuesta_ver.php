@@ -29,7 +29,7 @@ if (isset($_GET['ver'])) {
     $mysqli = new mysqli('bxrwf479ihzzkowvfops-mysql.services.clever-cloud.com', 'uasbvg6wuo7zeqf0', 'vM925AkxLdktJmeyNbSa', 'bxrwf479ihzzkowvfops') or die(mysqli_error($mysqli));
     $update = false;
     $codig = $_GET['ver'];
-    $result = $mysqli->query("SELECT * FROM respuestas WHERE ID='$codig;'");
+    $result = $mysqli->query("SELECT * FROM respuestas WHERE ID='$codig';");
 
     $update = true;
     $row_cnt = mysqli_num_rows($result);

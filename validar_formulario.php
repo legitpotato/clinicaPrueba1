@@ -3,7 +3,7 @@ include("base/conexion.php");
 session_start();
 $rut = $_SESSION["Rut"];
 $email = $_SESSION["Email"];
-$fecha = date('l jS \of F Y h:i:s A');
+$fecha = date('l jS \of F Y h:i:s');
 $respuesta1 = $_POST["respuesta1"];
 $respuesta2 = $_POST["respuesta2"];
 $respuesta3 = $_POST["respuesta3"];
@@ -30,13 +30,13 @@ $respuesta23 = $_POST["respuesta23"];
 $respuesta24 = $_POST["respuesta24"];
 
 
-$consulta = "INSERT INTO respuestas(Rut,Email,Fecha,pregunta1,pregunta2,pregunta3,pregunta4,pregunta5,pregunta6,pregunta7,pregunta8,pregunta9,pregunta10,pregunta11,pregunta12,pregunta13,pregunta14,pregunta15,pregunta16,pregunta17,pregunta18,pregunta19,pregunta20,pregunta21,pregunta22,pregunta23,pregunta24) VALUES ('$rut', '$email','$fecha', '$respuesta1', '$respuesta2', '$respuesta3', '$respuesta4', '$respuesta5', '$respuesta6', '$respuesta7', '$respuesta8', '$respuesta9', '$respuesta10', '$respuesta11', '$respuesta12', '$respuesta13', '$respuesta14', '$respuesta15', '$respuesta16', '$respuesta17', '$respuesta18', '$respuesta19', '$respuesta20', '$respuesta21', '$respuesta22', '$respuesta23', '$respuesta24' )";
+$consulta = "INSERT INTO respuestas(Rut,Email,Fecha,pregunta1,pregunta2,pregunta3,pregunta4,pregunta5,pregunta6,pregunta7,pregunta8,pregunta9,pregunta10,pregunta11,pregunta12,pregunta13,pregunta14,pregunta15,pregunta16,pregunta17,pregunta18,pregunta19,pregunta20,pregunta21,pregunta22,pregunta23,pregunta24) VALUES ('$rut', '$email','$fecha', '$respuesta1', '$respuesta2', '$respuesta3', '$respuesta4', '$respuesta5', '$respuesta6', '$respuesta7', '$respuesta8', '$respuesta9', '$respuesta10', '$respuesta11', '$respuesta12', '$respuesta13', '$respuesta14', '$respuesta15', '$respuesta16', '$respuesta17', '$respuesta18', '$respuesta19', '$respuesta20', '$respuesta21', '$respuesta22', '$respuesta23', '$respuesta24');";
 
 $resultado = mysqli_query($conexion, $consulta);
 if($resultado){
     $mensaje = "¡Formulario rellenado con éxito!";
         
-    header("Location: formulario.php");
+    header("location: formulario.php");
 }
 else{
     echo "Ha ocurrdio un error";
